@@ -36,6 +36,10 @@ app.get('/kittens', function(req, res){
     res.send("Page under construction!");
 });
 
+app.get('/OurPage', function(req, res){
+    res.sendFile("public/views/OurPage.html");
+});
+
 app.get('/about', function(req, res){
     res.sendFile('public/views/about.html', options);
 });
