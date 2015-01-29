@@ -44,6 +44,10 @@ app.get('/about', function(req, res){
     res.sendFile('public/views/about.html', options);
 });
 
+app.get('/GPACalculator', function(req, res){
+    res.sendFile('public/views/GPA_Calculator.html', options);
+});
+
 app.get('/', function(req, res){
     res.sendFile('public/views/index.html', options);
 });
@@ -61,6 +65,7 @@ var server = app.listen(9000, function(){
 
    console.log("server listening on http://%s:%s", host, port);
 });
+
 
 
 
