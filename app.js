@@ -37,7 +37,7 @@ app.get('/kittens', function(req, res){
 });
 
 app.get('/OurPage', function(req, res){
-    res.sendFile("public/views/OurPage.html");
+    res.sendFile("public/views/OurPage.html", options);
 });
 
 app.get('/about', function(req, res){
