@@ -59,20 +59,18 @@ var mainApp = angular.module("mainApp", []);
 
         $scope.textFieldCredits = "";
 
-        //try to store the grades first.
         $scope.data = [
-
-        ]
-        //then classes
-        $scope.classes = [
-
-        ]
-        //finally credits
-        $scope.credits = [
 
         ]
 
         $scope.addData = function(){
+            if($scope.textField.length >= 1) {
+                $scope.data.push({text: $scope.textField});
+                $scope.textField = "";
+            }
+        };
+
+        $scope.addGrades = function(){
             if($scope.textFieldGrades[0] == "A") {
                 $scope.data.push({text: $scope.textFieldGrades});
                 $scope.textFieldGrades = "";
