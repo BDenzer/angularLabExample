@@ -91,21 +91,18 @@ var mainApp = angular.module("mainApp", []);
                 $scope.data.push({text: $scope.textFieldGrades});
                 $scope.textFieldGrades = "";
             }
-        }
-
-        $scope.addClasses = function(){
+            //getting classes
             if($scope.textFieldClasses.length >= 1) {
                 $scope.classes.push({text: $scope.textFieldClasses});
                 $scope.textFieldClasses = "";
             }
-        };
-
-        $scope.addCredits = function(){
+            //getting credits
             if($scope.textFieldCredits.length >= 1) {
                 $scope.credits.push({text: $scope.textFieldCredits});
                 $scope.textFieldCredits = "";
             }
-        };
+
+        }
 
         $scope.removeData = function(index){
             $scope.data.splice(index, 1);
