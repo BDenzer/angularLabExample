@@ -94,13 +94,13 @@ var mainApp = angular.module("mainApp", []);
             }
             //getting classes
             if($scope.textFieldClasses.length >= 1) {
-                $scope.temp.push({text: $scope.textFieldClasses});
+                $scope.temp.push($scope.textFieldClasses);
                 $scope.textFieldClasses = "";
             }
             //getting credits
             if($scope.textFieldCredits.length >= 1) {
-                $scope.temp.push({text: $scope.textFieldCredits});
-                $scope.total.push({text: $scope.textFieldCredits});
+                $scope.temp.push($scope.textFieldCredits);
+                $scope.total.push($scope.textFieldCredits);
                 $scope.textFieldCredits = "";
             }
             $scope.data.push({text: $scope.temp});
