@@ -63,9 +63,7 @@ var mainApp = angular.module("mainApp", []);
 
         ];
 
-        $scope.total = [
-
-        ];
+        $scope.total = 0;
 
         $scope.temp = [
 
@@ -100,7 +98,7 @@ var mainApp = angular.module("mainApp", []);
             //getting credits
             if($scope.textFieldCredits.length >= 1) {
                 $scope.temp.push($scope.textFieldCredits);
-                $scope.total.push($scope.textFieldCredits);
+                $scope.total = $scope.total + $scope.textFieldCredits;
                 $scope.textFieldCredits = "";
             }
             $scope.data.push({text: $scope.temp});
@@ -111,5 +109,9 @@ var mainApp = angular.module("mainApp", []);
         $scope.removeData = function(index){
             $scope.data.splice(index, 1);
         };
+
+        $scope.gpa = function(){
+            //for loop to go through our arrays for [0] and [2] of each array in data and calculate gpa
+        }
 
     });
