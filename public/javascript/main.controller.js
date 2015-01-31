@@ -63,6 +63,10 @@ var mainApp = angular.module("mainApp", []);
 
         ];
 
+        $scope.total = [
+
+        ];
+
         $scope.temp = [
 
         ];
@@ -96,6 +100,7 @@ var mainApp = angular.module("mainApp", []);
             //getting credits
             if($scope.textFieldCredits.length >= 1) {
                 $scope.temp.push({text: $scope.textFieldCredits});
+                $scope.total.push({text: $scope.textFieldCredits});
                 $scope.textFieldCredits = "";
             }
             $scope.data.push({text: $scope.temp});
