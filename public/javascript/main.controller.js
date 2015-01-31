@@ -63,47 +63,35 @@ var mainApp = angular.module("mainApp", []);
 
         ];
 
-        $scope.grades = [
-
-        ];
-
-        $scope.classes = [
-
-        ];
-
-        $scope.credits = [
-
-        ];
-        
         $scope.addGrades = function(){
             if($scope.textFieldGrades == "A") {
-                $scope.data.push({text: $scope.textFieldGrades});
+                $scope.data.push({text: 4.0});
                 $scope.textFieldGrades = "";
             }
             if($scope.textFieldGrades == "B"){
-                $scope.data.push({text: $scope.textFieldGrades});
+                $scope.data.push({text: 3.0});
                 $scope.textFieldGrades = "";
             }
             if($scope.textFieldGrades == "C"){
-                $scope.data.push({text: $scope.textFieldGrades});
+                $scope.data.push({text: 2.0});
                 $scope.textFieldGrades = "";
             }
             if($scope.textFieldGrades == "D"){
-                $scope.data.push({text: $scope.textFieldGrades});
+                $scope.data.push({text: 1.0});
                 $scope.textFieldGrades = "";
             }
             if($scope.textFieldGrades == "F"){
-                $scope.data.push({text: $scope.textFieldGrades});
+                $scope.data.push({text: 0});
                 $scope.textFieldGrades = "";
             }
             //getting classes
             if($scope.textFieldClasses.length >= 1) {
-                $scope.classes.push({text: $scope.textFieldClasses});
+                $scope.data.push({text: $scope.textFieldClasses});
                 $scope.textFieldClasses = "";
             }
             //getting credits
             if($scope.textFieldCredits.length >= 1) {
-                $scope.credits.push({text: $scope.textFieldCredits});
+                $scope.data.push({text: $scope.textFieldCredits});
                 $scope.textFieldCredits = "";
             }
 
@@ -112,4 +100,5 @@ var mainApp = angular.module("mainApp", []);
         $scope.removeData = function(index){
             $scope.data.splice(index, 1);
         };
+
     });
