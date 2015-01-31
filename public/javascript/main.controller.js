@@ -73,23 +73,23 @@ var mainApp = angular.module("mainApp", []);
 
         $scope.addGrades = function(){
             if($scope.textFieldGrades == "A") {
-                $scope.temp.push({text: 4.0});
+                $scope.temp.push(4.0);
                 $scope.textFieldGrades = "";
             }
             if($scope.textFieldGrades == "B"){
-                $scope.temp.push({text: 3.0});
+                $scope.temp.push(3.0);
                 $scope.textFieldGrades = "";
             }
             if($scope.textFieldGrades == "C"){
-                $scope.temp.push({text: 2.0});
+                $scope.temp.push(2.0);
                 $scope.textFieldGrades = "";
             }
             if($scope.textFieldGrades == "D"){
-                $scope.temp.push({text: 1.0});
+                $scope.temp.push(1.0);
                 $scope.textFieldGrades = "";
             }
             if($scope.textFieldGrades == "F"){
-                $scope.temp.push({text: 0});
+                $scope.temp.push(0);
                 $scope.textFieldGrades = "";
             }
             //getting classes
