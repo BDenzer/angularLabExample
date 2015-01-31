@@ -63,37 +63,43 @@ var mainApp = angular.module("mainApp", []);
 
         ];
 
+        $scope.temp = [
+
+        ];
+
         $scope.addGrades = function(){
             if($scope.textFieldGrades == "A") {
-                $scope.data.push({text: 4.0});
+                $scope.temp.push({text: 4.0});
                 $scope.textFieldGrades = "";
             }
             if($scope.textFieldGrades == "B"){
-                $scope.data.push({text: 3.0});
+                $scope.temp.push({text: 3.0});
                 $scope.textFieldGrades = "";
             }
             if($scope.textFieldGrades == "C"){
-                $scope.data.push({text: 2.0});
+                $scope.temp.push({text: 2.0});
                 $scope.textFieldGrades = "";
             }
             if($scope.textFieldGrades == "D"){
-                $scope.data.push({text: 1.0});
+                $scope.temp.push({text: 1.0});
                 $scope.textFieldGrades = "";
             }
             if($scope.textFieldGrades == "F"){
-                $scope.data.push({text: 0});
+                $scope.temp.push({text: 0});
                 $scope.textFieldGrades = "";
             }
             //getting classes
             if($scope.textFieldClasses.length >= 1) {
-                $scope.data.push({text: $scope.textFieldClasses});
+                $scope.temp.push({text: $scope.textFieldClasses});
                 $scope.textFieldClasses = "";
             }
             //getting credits
             if($scope.textFieldCredits.length >= 1) {
-                $scope.data.push({text: $scope.textFieldCredits});
+                $scope.temp.push({text: $scope.textFieldCredits});
                 $scope.textFieldCredits = "";
             }
+            $scope.data.push({text: $scope.temp});
+            $scope.temp = [];
 
         };
 
