@@ -53,67 +53,62 @@ var mainApp = angular.module("mainApp", []);
     mainApp.controller('GPACtrl', function($scope){
         console.log("controller loaded!");
 
-        $scope.textField = "";
+        $scope.textFieldGrades = "";
 
-        //try to store the data first.
+        $scope.textFieldClasses = "";
+
+        $scope.textFieldCredits = "";
+
+        //try to store the grades first.
         $scope.data = [
+
+        ]
+        //then classes
+        $scope.classes = [
+
+        ]
+        //finally credits
+        $scope.credits = [
 
         ]
 
         $scope.addData = function(){
-            if($scope.textField == "A") {
-                $scope.data.push({text: $scope.textField});
-                $scope.textField = "";
+            if($scope.textFieldGrades[0] == "A") {
+                $scope.data.push({text: $scope.textFieldGrades});
+                $scope.textFieldGrades = "";
             }
-            if($scope.textField == "A-"){
-                $scope.data.push({text: $scope.textField});
-                $scope.textField = "";
+            if($scope.textFieldGrades == "B"){
+                $scope.data.push({text: $scope.textFieldGrades});
+                $scope.textFieldGrades = "";
             }
-            if($scope.textField == "B+"){
-                $scope.data.push({text: $scope.textField});
-                $scope.textField = "";
+            if($scope.textFieldGrades == "C"){
+                $scope.data.push({text: $scope.textFieldGrades});
+                $scope.textFieldGrades = "";
             }
-            if($scope.textField == "B"){
-                $scope.data.push({text: $scope.textField});
-                $scope.textField = "";
+            if($scope.textFieldGrades == "D"){
+                $scope.data.push({text: $scope.textFieldGrades});
+                $scope.textFieldGrades = "";
             }
-            if($scope.textField == "B-"){
-                $scope.data.push({text: $scope.textField});
-                $scope.textField = "";
-            }
-            if($scope.textField == "C+"){
-                $scope.data.push({text: $scope.textField});
-                $scope.textField = "";
-            }
-            if($scope.textField == "C"){
-                $scope.data.push({text: $scope.textField});
-                $scope.textField = "";
-            }
-            if($scope.textField == "C-"){
-                $scope.data.push({text: $scope.textField});
-                $scope.textField = "";
-            }
-            if($scope.textField == "D+"){
-                $scope.data.push({text: $scope.textField});
-                $scope.textField = "";
-            }
-            if($scope.textField == "D"){
-                $scope.data.push({text: $scope.textField});
-                $scope.textField = "";
-            }
-            if($scope.textField == "D-"){
-                $scope.data.push({text: $scope.textField});
-                $scope.textField = "";
-            }
-            if($scope.textField == "F"){
-                $scope.data.push({text: $scope.textField});
-                $scope.textField = "";
-            }
-            else{
-                $scope.data.push({text: $scope.textField});
-                $scope.textField = "";
+            if($scope.textFieldGrades == "F"){
+                $scope.data.push({text: $scope.textFieldGrades});
+                $scope.textFieldGrades = "";
             }
         }
+
+        $scope.addClasses = function(){
+            if($scope.textFieldClasses.length >= 1) {
+                $scope.classes.push({text: $scope.textFieldClasses});
+                $scope.textFieldClasses = "";
+            }
+        };
+
+        $scope.addCredits = function(){
+            if($scope.textFieldCredits.length >= 1) {
+                $scope.credits.push({text: $scope.textFieldCredits});
+                $scope.textFieldCredits = "";
+            }
+        };
+
         $scope.removeData = function(index){
             $scope.data.splice(index, 1);
         };

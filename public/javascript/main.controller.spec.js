@@ -33,7 +33,7 @@ describe('Testing controller: mainCtrl', function(){
 
         it("should be able to add an item to the list", function(){
             var initialLength = scope.data.length;
-            scope.textField = "kittens";
+            scope.textFieldGrades = "kittens";
             scope.addData();
             expect(scope.data.length > initialLength).toEqual(true);
         });
