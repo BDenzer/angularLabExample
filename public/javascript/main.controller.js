@@ -63,6 +63,18 @@ var mainApp = angular.module("mainApp", []);
 
         ]
 
+        $scope.grades = [
+
+        ]
+
+        $scope.classes = [
+
+        ]
+
+        $scope.credits = [
+
+        ]
+
         $scope.addData = function(){
             if($scope.textField.length >= 1) {
                 $scope.data.push({text: $scope.textField});
