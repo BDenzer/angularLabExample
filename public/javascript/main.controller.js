@@ -61,29 +61,22 @@ var mainApp = angular.module("mainApp", []);
 
         $scope.data = [
 
-        ]
+        ];
 
         $scope.grades = [
 
-        ]
+        ];
 
         $scope.classes = [
 
-        ]
+        ];
 
         $scope.credits = [
 
-        ]
-
-        $scope.addData = function(){
-            if($scope.textField.length >= 1) {
-                $scope.data.push({text: $scope.textField});
-                $scope.textField = "";
-            }
-        };
-
+        ];
+        
         $scope.addGrades = function(){
-            if($scope.textFieldGrades[0] == "A") {
+            if($scope.textFieldGrades == "A") {
                 $scope.data.push({text: $scope.textFieldGrades});
                 $scope.textFieldGrades = "";
             }
@@ -114,7 +107,7 @@ var mainApp = angular.module("mainApp", []);
                 $scope.textFieldCredits = "";
             }
 
-        }
+        };
 
         $scope.removeData = function(index){
             $scope.data.splice(index, 1);
