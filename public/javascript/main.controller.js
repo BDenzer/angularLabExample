@@ -110,8 +110,14 @@ var mainApp = angular.module("mainApp", []);
             $scope.data.splice(index, 1);
         };
 
-        $scope.gpa = function(){
-            //for loop to go through our arrays for [0] and [2] of each array in data and calculate gpa
+        $scope.getGPA = function(){
+            var GPT = 0;
+            var GPA = 0;
+            for (i = 0; i < data.length; i++){
+                GPT = GPT + (data[i[0]] * data[i[2]]);
+            }
+            GPA = GPT / $scope.total;
+            return GPA;
         }
 
     });
