@@ -143,4 +143,19 @@ var mainApp = angular.module("mainApp", []);
             return $scope.GPA;
         };
 
+        $scope.itemsInList = function(){
+            return $scope.data.length;
+        };
+
+        $scope.GPAColor = function(){
+            if($scope.GPA >= 3){
+                return GoodGrade;
+            }
+            else if($scope.GPA >= 2){
+                return OkayGrade;
+            }
+            else{
+                return badGrade;
+            }
+        };
     });
