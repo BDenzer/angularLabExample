@@ -97,9 +97,31 @@ var mainApp = angular.module("mainApp", []);
             }
             //getting credits
             if($scope.textFieldCredits.length >= 1) {
-                $scope.temp.push($scope.textFieldCredits);
-                $scope.total = $scope.total + $scope.textFieldCredits;
-                $scope.textFieldCredits = "";
+                if($scope.textFieldCredits == "1") {
+                    $scope.temp.push(1.0);
+                    $scope.total = $scope.total + 1.0;
+                    $scope.textFieldCredits = "";
+                }
+                else if($scope.textFieldCredits == "2") {
+                    $scope.temp.push(2.0);
+                    $scope.total = $scope.total + 2.0;
+                    $scope.textFieldCredits = "";
+                }
+                else if($scope.textFieldCredits == "3") {
+                    $scope.temp.push(3.0);
+                    $scope.total = $scope.total + 3.0;
+                    $scope.textFieldCredits = "";
+                }
+                else if($scope.textFieldCredits == "4") {
+                    $scope.temp.push(4.0);
+                    $scope.total = $scope.total + 4.0;
+                    $scope.textFieldCredits = "";
+                }
+                else if($scope.textFieldCredits == "5") {
+                    $scope.temp.push(5.0);
+                    $scope.total = $scope.total + 5.0;
+                    $scope.textFieldCredits = "";
+                }
             }
             $scope.data.push({text: $scope.temp});
             $scope.temp = [];
@@ -118,6 +140,10 @@ var mainApp = angular.module("mainApp", []);
             }
             GPA = GPT / $scope.total;
             return GPA;
-        }
+        };
+
+        $scope.itemsInList = function(){
+            return $scope.data.length;
+        };
 
     });
