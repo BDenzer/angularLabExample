@@ -74,19 +74,19 @@ var mainApp = angular.module("mainApp", []);
                 $scope.temp.push(4.0);
                 $scope.textFieldGrades = "";
             }
-            if($scope.textFieldGrades == "B"){
+            else if($scope.textFieldGrades == "B"){
                 $scope.temp.push(3.0);
                 $scope.textFieldGrades = "";
             }
-            if($scope.textFieldGrades == "C"){
+            else if($scope.textFieldGrades == "C"){
                 $scope.temp.push(2.0);
                 $scope.textFieldGrades = "";
             }
-            if($scope.textFieldGrades == "D"){
+            else if($scope.textFieldGrades == "D"){
                 $scope.temp.push(1.0);
                 $scope.textFieldGrades = "";
             }
-            if($scope.textFieldGrades == "F"){
+            else if($scope.textFieldGrades == "F"){
                 $scope.temp.push(0);
                 $scope.textFieldGrades = "";
             }

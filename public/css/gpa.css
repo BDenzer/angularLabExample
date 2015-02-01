@@ -25,12 +25,14 @@ float: right;
 }
 
 
-A {
+.Goodgrade {
     text: color blue;
 }
 
-B {
+.okayGrade {
     text: color orange;
 }
 
-
+.badGrade {
+    text: color red;
+}
