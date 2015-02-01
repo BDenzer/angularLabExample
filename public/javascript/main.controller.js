@@ -69,6 +69,8 @@ var mainApp = angular.module("mainApp", []);
 
         ];
 
+        $scope.GPA = 0;
+
         $scope.addGrades = function(){
             if($scope.textFieldGrades == "A") {
                 $scope.temp.push(4.0);
@@ -134,16 +136,11 @@ var mainApp = angular.module("mainApp", []);
 
         $scope.getGPA = function(){
             var GPT = 0;
-            var GPA = 0;
             for (i = 0; i < data.length; i++){
                 GPT = GPT + (data[i[0]] * data[i[2]]);
             }
-            GPA = GPT / $scope.total;
-            return GPA;
-        };
-
-        $scope.itemsInList = function(){
-            return $scope.data.length;
+            $scope.GPA = GPT / $scope.total;
+            return $scope.GPA;
         };
 
     });
