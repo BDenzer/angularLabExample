@@ -132,7 +132,7 @@ var mainApp = angular.module("mainApp", []);
 
         $scope.removeData = function(index){
             $scope.data.splice(index, 1);
-        };
+        };O
 
         $scope.getGPA = function(){
             var GPT = 0;
@@ -149,13 +149,13 @@ var mainApp = angular.module("mainApp", []);
 
         $scope.GPAColor = function(){
             if($scope.GPA >= 3){
-                return GoodGrade;
+                return "GoodGrade";
             }
             else if($scope.GPA >= 2){
-                return OkayGrade;
+                return "OkayGrade";
             }
             else{
-                return badGrade;
+                return "badGrade";
             }
         };
     });
