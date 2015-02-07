@@ -60,21 +60,12 @@ var mainApp = angular.module("mainApp", []);
         $scope.textFieldCredits = "";
 
         $scope.grades = [
-
         ];
 
         $scope.classes = [
-
         ];
 
         $scope.credits = [
-
-        ];
-
-        $scope.total = 0;
-
-        $scope.temp = [
-
         ];
 
         $scope.GPA = 0;
@@ -109,27 +100,22 @@ var mainApp = angular.module("mainApp", []);
             if($scope.textFieldCredits.length >= 1) {
                 if($scope.textFieldCredits == "1") {
                     $scope.credits.push(1.0);
-                    $scope.total = $scope.total + 1.0;
                     $scope.textFieldCredits = "";
                 }
                 else if($scope.textFieldCredits == "2") {
                     $scope.credits.push(2.0);
-                    $scope.total = $scope.total + 2.0;
                     $scope.textFieldCredits = "";
                 }
                 else if($scope.textFieldCredits == "3") {
                     $scope.credits.push(3.0);
-                    $scope.total = $scope.total + 3.0;
                     $scope.textFieldCredits = "";
                 }
                 else if($scope.textFieldCredits == "4") {
                     $scope.credits.push(4.0);
-                    $scope.total = $scope.total + 4.0;
                     $scope.textFieldCredits = "";
                 }
                 else if($scope.textFieldCredits == "5") {
                     $scope.credits.push(5.0);
-                    $scope.total = $scope.total + 5.0;
                     $scope.textFieldCredits = "";
                 }
             }
@@ -146,15 +132,14 @@ var mainApp = angular.module("mainApp", []);
 
         $scope.getGPA = function(){
             var GPT = 0;
+            var totalCredits = 0;
             for (i = 0; i < $scope.grades.length; i++){
                 GPT = GPT + ($scope.grades[i]*$scope.credits[i]);
-            }
-            $scope.GPA = GPT / $scope.total;
-            return $scope.GPA;
-        };
+                totalCredits = totalCredits + $scope.credits[i];
 
-        $scope.itemsInList = function(){
-            return $scope.data.length;
+            }
+            $scope.GPA = GPT / totalCredits;
+            return $scope.GPA;
         };
 
         /**
@@ -162,7 +147,7 @@ var mainApp = angular.module("mainApp", []);
          */
         $scope.GPAColor = function(){
             if($scope.GPA >= 3){
-                return "goodGrade";
+                return goodGrade;
             }
             else if($scope.GPA >= 2){
                 return "okayGrade";
