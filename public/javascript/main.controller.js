@@ -79,7 +79,7 @@ var mainApp = angular.module("mainApp", []);
 
         $scope.GPA = 0;
 
-        $scope.addGrades = function(){
+        $scope.addData = function(){
             if($scope.textFieldGrades == "A") {
                 $scope.grades.push(4.0);
                 $scope.textFieldGrades = "";
