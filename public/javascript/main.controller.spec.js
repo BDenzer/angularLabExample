@@ -122,7 +122,7 @@ describe('Testing controller: GPACtrl', function(){
         it("should return a string called GoodGrade", function(){
             scope.GPA = 3;
             var string = scope.GPAColor();
-            expect(string = "GoodGrade")
+            expect(string = "color: blue")
         });
 
         it("should be able to calculate the proper gpa", function(){

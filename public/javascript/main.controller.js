@@ -147,13 +147,13 @@ var mainApp = angular.module("mainApp", []);
          */
         $scope.GPAColor = function(){
             if($scope.GPA >= 3){
-                return goodGrade;
+                return "color: blue";
             }
             else if($scope.GPA >= 2){
-                return "okayGrade";
+                return "color: orange";
             }
             else{
-                return "badGrade";
+                return "color: red";
             }
         };
     });

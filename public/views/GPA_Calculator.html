@@ -21,18 +21,18 @@
     <ul class="container-fluid">
         <li class="list-group-item">
 
-            <form ng-submit="addGrades()">
+            <form ng-submit="addData()">
                 <input ng-model="textFieldGrades" type="text" size ="50" placeholder="add grades here.">
                 <input ng-model="textFieldClasses" type="text" size ="50" placeholder="add classes here.">
                 <input ng-model="textFieldCredits" type="text" size ="50" placeholder="add credits here.">
                 <input type="submit" value="submit" class="btn btn-primary">
                 <div class="{{GPAColor()}}" >
-                <span class="floatLeft">Your GPA: {{getGPA()}}</span>
+                <span  style="{{GPAColor()}}" class="floatLeft">Your GPA: {{getGPA()}} </span>
                 </div>
             </form>
 
         </li>
-        <li class="list-group-item" ng-repeat="test in grades">{{test.text}}<span class="glyphicon glyphicon-trash floatRight" style="color: red" ng-click="removeData($index)"></span></li>
+        <li class="list-group-item" ng-repeat="test in classes">{{test.text}}<span class="glyphicon glyphicon-trash floatRight" style="color: red" ng-click="removeData($index)"></span></li>
     </ul>
 </div>
 
